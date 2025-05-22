@@ -1,10 +1,15 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+from dotenv import load_dotenv
+import os
+
 from datetime import datetime
 import requests
 
 app = FastAPI()
+
+ip_api_key = os.getenv("API_KEY")
 
 #1
 @app.get("/")
@@ -48,7 +53,7 @@ async def time():
 #6
 @app.get("/your_location/{ip_address}")
 async def your_location(ip_address: str):
-    url = f"https://api.ipstack.com/{ip_address}?access_key=62fbb4a2e0359346047c8f5b96e0fea1"
+    url = f"https://api.ipstack.com/{ip_address}?access_key={ip_api_key}"
     response = requests.get(url)
     data = response.json()
     return {"IP Info": data}
