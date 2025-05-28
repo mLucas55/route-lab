@@ -12,14 +12,16 @@ app = FastAPI()
 
 ip_api_key = os.getenv("API_KEY")
 
+saved_strings = []
+
 #1 - Index
 @app.get("/")
 async def read_root():
     return {"Routes": [
                 "1. INDEX -------------------- /",
-                "2. HELLO NAME & AGE QUERY --- /hello",
-                "3. HELLO NAME & AGE PATH ---- /hello_path/{name}/{age}",
-                "4. HELLO NAME & AGE CLASS --- hello_personclass",
+                "2. HELLO NAME & AGE PATH ---- /hello_path/{name}/{age}",
+                "3. SAVE A STRING ------------ /save_string/{string}",
+                "4. DISPLAY SAVED STRINGS ---- /display_strings",
                 "5. THE CURRENT TIME --------- /time",
                 "6. IP AND LOCATION INFO ----- /your_location/{ip_address}",
                 "7. ADDITION ----------------- /plus/{a}/{b}",
@@ -29,23 +31,20 @@ async def read_root():
             ]}
 
 #2
-@app.get("/hello")
-async def hello(name: str, age: int):
-    return {"message": f"Hello {name}, you are {age} years old!"}
-
-#3
 @app.get("/hello_path/{name}/{age}")
 async def hello_path(name: str, age: int):
     return {"message": f"Hello {name}, you are {age} years old!"}
 
-class PersonInput(BaseModel):
-    name: str
-    age: int
+#3 - Save a string
+@app.get("/save_string/{string}")
+async def save_string(string: str):
+    saved_strings.append(string)
+    return {"Appended": {string}}
 
-#4 - Self documenting and validating
-@app.post("/hello_personclass")
-async def hello_personclass(input: PersonInput):
-    return f"Hello {input.name}, you are {input.age} years old!"
+#4
+@app.get("/display_strings")
+async def display_strings():
+    return {"Saved strings": saved_strings}
 
 #5 - Current date and time
 @app.get("/time")
