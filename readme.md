@@ -8,7 +8,7 @@ This project is a FastAPI-based web application, expected to run on a Uvicorn ap
 
 # Design
 
-The project is designed using FastAPI for its modernity and efficiency. Eeach route is modular and clearly defined for simplicity, for example one route saves strings and another route displays saved strings. An environment variable is used for the IP-based location lookup, a free key can be obtained at https://ipstack.com/
+The project is designed using FastAPI for its modernity and efficiency. Eeach route is modular and clearly defined for simplicity, for example one route saves strings and another route displays saved strings. An environment variable is used for the IP-based location lookup, a free key can be obtained at ipstack.com
 
 Route and input structure:
 
