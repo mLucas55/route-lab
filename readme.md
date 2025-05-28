@@ -8,7 +8,8 @@ This project is a FastAPI-based web application, expected to run on a Uvicorn ap
 
 # Design
 
-There are 10 routes with the following input structure:
+Route structure and input:
+
 1. INDEX -------------------- /
 2. RETURNS A PROVIDED AGE --- /age_query?age={age}
 3. SAVE A STRING ------------ /save_string/{string}
