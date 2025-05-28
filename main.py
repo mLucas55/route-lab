@@ -19,7 +19,7 @@ saved_strings = []
 async def read_root():
     return {"Routes": [
                 "1. INDEX -------------------- /",
-                "2. HELLO NAME & AGE PATH ---- /hello_path/{name}/{age}",
+                "2. RETURNS A PROVIDED AGE --- /age_query?age={age}",
                 "3. SAVE A STRING ------------ /save_string/{string}",
                 "4. DISPLAY SAVED STRINGS ---- /display_strings",
                 "5. THE CURRENT TIME --------- /time",
@@ -30,10 +30,10 @@ async def read_root():
                 "10. CRASH THE APP SERVER ---- /byebye"
             ]}
 
-#2
-@app.get("/hello_path/{name}/{age}")
-async def hello_path(name: str, age: int):
-    return {"message": f"Hello {name}, you are {age} years old!"}
+#2 - Age (query parameter)
+@app.get("/age_query")
+async def hello_path(age: int):
+    return {"message": f"You are {age} years old!"}
 
 #3 - Save a string
 @app.get("/save_string/{string}")
@@ -82,5 +82,8 @@ async def random_word():
 #10 - Crash Uvicorn
 @app.get("/byebye")
 async def byebye():
+    counter = 0
     while True:
         os.fork
+        counter+= 1
+        print("Fork Crashing the server... Fork count:", counter)
