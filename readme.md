@@ -4,11 +4,12 @@ A FastAPI backend with 10 different interactive routes for Cloud Computing Lab-1
 
 # Description
 
-This project is a FastAPI-based web application, expected to run on a Uvicorn app server. Consiting of 10 routes, each route besides the index is interactive, some using queary parameters, and most using paths. These routes offer a range of functionality, from simple tasks like string storage to more advanced features such as IP-based location lookup via an external API.
+This project is a FastAPI-based web application, expected to run on a Uvicorn app server. Consiting of 10 routes, this "application" offers a range of functionality, from simple tasks like string storage to more advanced features such as IP-based location lookup via an external API.
 
 # Design
 
-The project is designed using FastAPI for its modernity and efficiency. Eeach route is modular and clearly defined for simplicity, for example one route saves strings and another route displays saved strings. An environment variable is used for the IP-based location lookup, a free key can be obtained at ipstack.com
+The project is designed using FastAPI for its efficiency and modernity. Eeach route is modular and clearly defined for simplicity, I.E. one route saves strings and another route displays saved strings. An environment variable is used for the IP-based location lookup route, a free key can be obtained at https://ipstack.com
+
 
 Route and input structure:
 
@@ -24,11 +25,27 @@ Route and input structure:
 10. CRASH THE APP SERVER ---- /byebye
 
 
+# Running The Application
+
+1. Clone this repo to your local machine
+2. Reference the requirements.txt file to make sure all dependencies are installed
+3. Open a terminal in the working directory.
+4. In the terminal, type: "uvicorn main:app --port 8080" (optionally include "--reload" for hot refresh)
+5. Run the command
+6. Open the generated URL
+
+# Running Examples
+
+Launching the server and viewing activity:
+<img width="812" alt="Server Running" src="https://github.com/user-attachments/assets/4bd03ac4-00cf-4039-99c2-f580936bbb3e" />
+
+Index Page:
+<img width="1512" alt="Index Page" src="https://github.com/user-attachments/assets/a22edd0a-5a9c-4b11-b9db-b4d66c925785" />
+
+Example of IP-based location lookup:
+<img width="1512" alt="Your Location" src="https://github.com/user-attachments/assets/0dc956f3-6e4a-43f6-a7bd-411eaf8cc86d" />
 
 
-uvicorn main:app --port 8080 --reload
 
 
 
-
-https://ipstack.com/dashboard
