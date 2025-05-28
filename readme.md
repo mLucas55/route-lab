@@ -1,6 +1,6 @@
 # Introduction
 
-A FastAPI backend which provides 10 different interactive routes for Cloud Computing Lab-1.
+A FastAPI backend with 10 different interactive routes for Cloud Computing Lab-1.
 
 # Description
 
