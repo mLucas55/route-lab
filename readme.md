@@ -36,13 +36,13 @@ Route and input structure:
 
 # Running Examples
 
-Launching the server and viewing activity:
+Launching The Server and Viewing Activity:
 <img width="812" alt="Server Running" src="https://github.com/user-attachments/assets/4bd03ac4-00cf-4039-99c2-f580936bbb3e" />
 
 Index Page:
 <img width="1512" alt="Index Page" src="https://github.com/user-attachments/assets/a22edd0a-5a9c-4b11-b9db-b4d66c925785" />
 
-Example of IP-based location lookup:
+Example of IP-based Location Lookup:
 <img width="1512" alt="Your Location" src="https://github.com/user-attachments/assets/0dc956f3-6e4a-43f6-a7bd-411eaf8cc86d" />
 
 
