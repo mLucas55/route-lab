@@ -86,4 +86,4 @@ async def byebye():
     while True:
         os.fork
         counter+= 1
-        print("Fork Crashing the server... Fork count:", counter)
+        print("Crashing the server... Fork count:", counter)
