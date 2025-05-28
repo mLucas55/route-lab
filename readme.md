@@ -8,7 +8,9 @@ This project is a FastAPI-based web application, expected to run on a Uvicorn ap
 
 # Design
 
-Route structure and input:
+The project is designed using FastAPI for its modernity and efficiency. Eeach route is modular and clearly defined for simplicity, for example one route saves strings and another route displays saved strings. An environment variable is used for the IP-based location lookup, a free key can be obtained at https://ipstack.com/
+
+Route and input structure:
 
 1. INDEX -------------------- /
 2. RETURNS A PROVIDED AGE --- /age_query?age={age}
@@ -20,6 +22,7 @@ Route structure and input:
 8. SUBTRACTION -------------- /minus/{a}/{b}
 9. GENERATE A RANDOM WORD --- /random_word
 10. CRASH THE APP SERVER ---- /byebye
+
 
 
 
