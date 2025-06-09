@@ -1,0 +1,17 @@
+http://127.0.0.1:8080/age_query?age=22
+
+http://127.0.0.1:8080/save_string/Apples
+
+http://127.0.0.1:8080/display_strings
+
+http://127.0.0.1:8080/time
+
+http://127.0.0.1:8080/your_location/69.43.66.33
+
+http://127.0.0.1:8080/plus/2/2
+
+http://127.0.0.1:8080/minus/5/2
+
+http://127.0.0.1:8080/random_word
+
+http://127.0.0.1:8080/byebye
