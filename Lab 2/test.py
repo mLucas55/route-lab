@@ -117,7 +117,7 @@ class routesTest(unittest.TestCase):
 
     # HEADERS DEMO
     def test_route_getHeadersDemo(self):
-        url = "http://localhost:8080/hello_headers"
+        url = "http://localhost:8080/headers"
         response = requests.get(url)
 
         print("Response status code:", response.status_code)
@@ -126,7 +126,7 @@ class routesTest(unittest.TestCase):
 
     # COOKIE DEMO
     def test_route_getCookieDemo(self):
-        url = "http://localhost:8080/read_cookie"
+        url = "http://localhost:8080/session_cookie"
         response = requests.get(url)
 
         print("Response status code:", response.status_code)

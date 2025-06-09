@@ -22,7 +22,7 @@ class cli:
         print("9. Generate a random word")
         print("10. Crash the app server")
         print("11. Headers demo")
-        print("12. Cookies demo")
+        print("12. Session cookie")
         print("13. Exit")
 
         user_input = input("Select a route (#): ")
@@ -56,9 +56,21 @@ class cli:
             case '10':
                 self.router("/byebye")
             case '11':
-                self.router("/hello_headers")
+                theName = input("Enter your name: ")
+                headers = {
+                    "content-type": "application/json",
+                    "X-Custom-Header": "CustomValue",
+                    "name": theName
+                    }
+                url = "http://localhost:8080/headers"
+                response = requests.get(url=url, headers=headers)
+                print("\n ")
+                print(response.json())
+                print("\nResponse status code:", response.status_code)
+                input("Press Enter to continue...")
+                
             case '12':
-                self.router("/read_cookie")
+                self.router("/session_cookie")
             case '13':
                 print("Exiting...")
                 exit()

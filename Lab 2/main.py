@@ -1,5 +1,6 @@
-from fastapi import FastAPI, Response, Cookie
+from fastapi import FastAPI, Response, Cookie, Header
 from pydantic import BaseModel
+from typing import Optional
 
 from dotenv import load_dotenv
 import os
@@ -27,7 +28,7 @@ async def read_root():
                 "7. ADDITION ----------------- /plus/{a}/{b}",
                 "8. SUBTRACTION -------------- /minus/{a}/{b}",
                 "9. GENERATE A RANDOM WORD --- /random_word",
-                "10. CRASH THE APP SERVER ---- /byebye"
+                "10. CRASH THE APP SERVER ---- /byebye",
                 "11. HEADERS DEMO ------------ /hello_headers",
                 "12. COOKIE DEMO ------------- /read_cookie"
             ]}
@@ -90,16 +91,18 @@ async def byebye():
         counter+= 1
         print("Crashing the server... Fork count:", counter)
 
-#11 - Hello World HEADERS
-@app.get("/hello_headers")
-def hello_headers(response: Response):
-    response.headers["My-Header"] = "HelloHeader"
-    return {"message": "Hello, world!"}
-
+#11 - HEADERS
+@app.get("/headers")
+async def hello_headers(name: Optional[str] = Header(None)):
+    print("Received header:", name)
+    return {"Header-name": name}
+    
 #12 - Cookie
-@app.get("/read_cookie")
-def read_cookie(response: Response, cookie_value: str = Cookie(None)):
-    if cookie_value:
-        return {"cookie_value": cookie_value}
-    response.set_cookie(key="cookie_value", value="Howdy!")
-    return {"message": "Cookie set."}
+@app.get("/session_cookie")
+async def read_cookie(response: Response, session_id: Optional[str] = Cookie(None)):
+    if session_id:
+        return {"session_id": session_id}
+    else:
+        new_session_id = "session_123"
+        response.set_cookie(key="session_id", value=new_session_id)
+        return {"message": "Session cookie set.", "session_id": new_session_id}

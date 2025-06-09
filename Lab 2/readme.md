@@ -23,8 +23,8 @@ Route and input structure:
 8. SUBTRACTION -------------- /minus/{a}/{b}
 9. GENERATE A RANDOM WORD --- /random_word
 10. CRASH THE APP SERVER ---- /byebye
-11. HEADERS DEMO ------------ /hello_headers
-12. COOKIE DEMO ------------- /read_cookie
+11. HEADERS DEMO ------------ /headers
+12. COOKIE DEMO ------------- /session_cookie
 
 # Running The Application (Browser)
 
