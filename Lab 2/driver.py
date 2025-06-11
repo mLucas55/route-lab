@@ -1,6 +1,8 @@
 import requests
 import json
 
+session = requests.Session()
+
 class cli:
 
     def start(self):
@@ -79,7 +81,7 @@ class cli:
 
     def router(self, route):
         base_url = "http://localhost:8080"
-        response = requests.get(f"{base_url}/{route}")
+        response = session.get(f"{base_url}/{route}")
         print("\n ")
         print(json.dumps(response.json(), indent=4))
         print("\nResponse status code:", response.status_code)
