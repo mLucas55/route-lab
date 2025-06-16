@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const PORT = 3500;
 
-const favNum = 0;
+favNum = 0;
 
 const inventory = {
   1: { id: 1, name: 'Laptop', price: 999.99 },

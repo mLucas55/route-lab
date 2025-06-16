@@ -17,7 +17,7 @@ Route and input structure:
 2. HELLO NAME --------------- /helloname?name={name}
 3. FAVORITE NUMBER ---------- /favoritenumber?number={number}
 4. INVENTORY ITEM ----------- /inventory?item={itemId}
-5. PROCESS PAYMENT ---------- /processpayment (POST)
+5. PROCESS PAYMENT ---------- /processpayment (uses headers x-card-number, x-cvv, x-amount) !POST!
 6. GUESS THE NUMBER --------- /guessTheNumber?number={number}
 7. ADDITION ----------------- /addition?num1={num1}&num2={num2}
 8. SUBTRACTION -------------- /subtraction (uses headers x-num1, x-num2)
