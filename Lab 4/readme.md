@@ -1,14 +1,16 @@
 # Introduction
 
-A FastAPI backend with 12 different interactive routes for Cloud Computing Lab-1.
+A containerizable FastAPI backend with 12 different interactive routes for Cloud Computing Lab-4.
 
 # Description
 
-This project is a FastAPI-based web application, expected to run on a Uvicorn app server. Consiting of 12 routes, this "application" offers a range of functionality, from simple tasks like string storage to more advanced features such as IP-based location lookup via an external API, response-headers, and cookie reading.
+This project is a FastAPI-based web application, expected to run on a Uvicorn app server with the option to containerize it in docker. Consiting of 12 routes, this "application" offers a range of functionality, from simple tasks like string storage to more advanced features such as IP-based location lookup via an external API, response-headers, and cookie reading.
 
 # Design
 
 The project is designed using FastAPI for its efficiency and modernity. Eeach route is modular and clearly defined for simplicity, I.E. one route saves strings and another route displays saved strings. An environment variable is used for the IP-based location lookup route, a free key can be obtained at https://ipstack.com
+
+The provided Dockerfile allows this FastAPI app to be built as an image and ran in a container.
 
 
 Route and input structure:
@@ -43,6 +45,13 @@ Route and input structure:
 4. In the terminal, type: "uvicorn main:app --port 8080" (optionally include "--reload" for hot refresh)
 5. Run the command
 6. Run driver.py
+
+# Running The Application (Container)
+
+1. Clone this repo to your local machine
+2. In terminal run: docker build -t <name>
+3. In terminal run: docker run -p 8080:8080 <name>
+4. View the container using the Docker desktop app and UI
 
 # Running Examples
 
