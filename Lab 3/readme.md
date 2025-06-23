@@ -26,7 +26,7 @@ Route and input structure:
 
 # Running The Application (Browser)
 
-1. Clone this repo to your local machine
+1. Clone this repo to your local machine (VSCode Recommended)
 2. Open a terminal in the working directory.
 3. In the terminal, type: "node main.js"
 4. Copy the URL and paste it into Postman
