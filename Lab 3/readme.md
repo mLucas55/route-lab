@@ -41,7 +41,3 @@ Route and input structure:
 4. In the terminal, type: "uvicorn main:app --port 8080" (optionally include "--reload" for hot refresh)
 5. Run the command
 6. Run driver.py
-
-
-
-
