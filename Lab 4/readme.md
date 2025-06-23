@@ -31,11 +31,12 @@ Route and input structure:
 # Running The Application (Browser)
 
 1. Clone this repo to your local machine (VSCode recommended)
-2. Reference the requirements.txt file to make sure all dependencies are installed
-3. Open a terminal in the working directory
-4. In the terminal, type: "uvicorn main:app --port 8080" (optionally include "--reload" for hot refresh)
-5. Run the command
-6. Open the generated URL
+2. Establish a Python environment (venv recommended)
+3. Reference the requirements.txt file to make sure all dependencies are installed
+4. Open a terminal in the working directory
+5. In the terminal, type: "uvicorn main:app --port 8080" (optionally include "--reload" for hot refresh)
+6. Run the command
+7. Open the generated URL
 
 # Running The Application (CLI Driver)
 
