@@ -27,17 +27,7 @@ Route and input structure:
 # Running The Application (Browser)
 
 1. Clone this repo to your local machine
-2. Reference the requirements.txt file to make sure all dependencies are installed
-3. Open a terminal in the working directory.
-4. In the terminal, type: "node main.js"
-5. Copy the URL and paste it into Postman
+2. Open a terminal in the working directory.
+3. In the terminal, type: "node main.js"
+4. Copy the URL and paste it into Postman
 5. Begin using its routes!
-
-# Running The Application (CLI Driver)
-
-1. Clone this repo to your local machine
-2. Reference the requirements.txt file to make sure all dependencies are installed
-3. Open a terminal in the working directory.
-4. In the terminal, type: "uvicorn main:app --port 8080" (optionally include "--reload" for hot refresh)
-5. Run the command
-6. Run driver.py
