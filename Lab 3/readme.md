@@ -30,4 +30,4 @@ Route and input structure:
 2. Open a terminal in the working directory.
 3. In the terminal, type: "node main.js"
 4. Copy the URL and paste it into Postman
-5. Begin using its routes!
+5. Begin interacting with the web application by using its routes (Postman recommended)
