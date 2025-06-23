@@ -30,41 +30,27 @@ Route and input structure:
 
 # Running The Application (Browser)
 
-1. Clone this repo to your local machine
+1. Clone this repo to your local machine (VSCode recommended)
 2. Reference the requirements.txt file to make sure all dependencies are installed
-3. Open a terminal in the working directory.
+3. Open a terminal in the working directory
 4. In the terminal, type: "uvicorn main:app --port 8080" (optionally include "--reload" for hot refresh)
 5. Run the command
 6. Open the generated URL
 
 # Running The Application (CLI Driver)
 
-1. Clone this repo to your local machine
-2. Reference the requirements.txt file to make sure all dependencies are installed
-3. Open a terminal in the working directory.
-4. In the terminal, type: "uvicorn main:app --port 8080" (optionally include "--reload" for hot refresh)
-5. Run the command
-6. Run driver.py
+1. Clone this repo to your local machine (VSCode recommended)
+2. Establish a Python environment (venv recommended)
+3. Reference the requirements.txt file to make sure all dependencies are installed
+4. Open a terminal in the working directory
+5. In the terminal type and run: "uvicorn main:app --port 8080" (optionally include "--reload" for hot refresh)
+6. In the terminal type and run : "python driver.py"
 
 # Running The Application (Container)
 
-1. Clone this repo to your local machine
-2. In terminal run: docker build -t <name>
-3. In terminal run: docker run -p 8080:8080 <name>
-4. View the container using the Docker desktop app and UI
-
-# Running Examples
-
-Launching The Server and Viewing Activity:
-<img width="812" alt="Server Running" src="https://github.com/user-attachments/assets/4bd03ac4-00cf-4039-99c2-f580936bbb3e" />
-
-Index Page:
-<img width="1512" alt="Index Page" src="https://github.com/user-attachments/assets/a22edd0a-5a9c-4b11-b9db-b4d66c925785" />
-
-Example of IP-based Location Lookup:
-<img width="1512" alt="Your Location" src="https://github.com/user-attachments/assets/0dc956f3-6e4a-43f6-a7bd-411eaf8cc86d" />
-
-
-
-
-
+1. Clone this repo to your local machine (VSCode recommended)
+2. Open a terminal in the working directory
+3. In terminal type and run: docker build -t <name>
+4. In terminal type and run: docker run -p 8080:8080 <name>
+5. Verify the container was succesfuly created (Docker desktop app/ui recommended)
+6. Interact with the routes using terminal in the working directory (Docker desktop app/ui recommended)
