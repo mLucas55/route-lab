@@ -17,7 +17,7 @@ There are 4 group by queries
 
 # Running The Script (DBeaver)
 
-1. Download createguitar.sql and using an SQL IDE of your choice (must support MySQL), run the script
+1. Download createguitar.sql and using an SQL IDE of your choice (must support MySQL), import and execute the script
 2. Download Script.sql and import it into your chosen SQL IDE
 3. Before executing the different queries, execute the USE statement at the top of script
 4. Execute the remaining queries
