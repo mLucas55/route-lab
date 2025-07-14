@@ -8,7 +8,12 @@ This lab is an SQL re-introduction. It contains a collection of query statements
 
 # Design
 
-The project is written in SQL using DBeaver and is intended to be used with the MySQl guitar database
+The project is written in SQL using DBeaver and is intended to be used with the MySQl guitar database.
+
+There are 7 simple single table queries
+There are 5 innjer join queries
+There is 1 query with a function
+There are 4 group by queries
 
 # Running The Script (DBeaver)
 
