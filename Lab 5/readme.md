@@ -4,7 +4,7 @@ An SQL script containing 17 queries for a guitar database.
 
 # Description
 
-This lab is an SQL re-introduction. It contains a collection of query statements ranging from simple table selects, to slightly more complex inner-join and group-by statements
+This lab is an SQL re-introduction. It contains a collection of query statements ranging from simple table selects, to slightly more complex inner-join and group-by statements that gather information about products, customers, orders, and more.
 
 # Design
 
