@@ -20,7 +20,7 @@ There are 4 group by queries
 # How to use
 
 1. Download and install Docker on your machine, make sure it stays running in the background
-2. Clone the Lab 6 folder to your machine and open it in your ID of choice (VSCode recommended)
+2. Clone the Lab 6 folder to your machine and open it in your IDE of choice (VSCode recommended)
 3. Open up a new terminal and CD to the working directory
 4. Run the command: docker-compose up-d
 5. Verify the container is running with the command: docker ps
