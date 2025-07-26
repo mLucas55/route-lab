@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: my_guitar_shop
+      MYSQL_USER: mgs_user
+      MYSQL_PASSWORD: pa55word
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./createguitar.sql:/docker-entrypoint-initdb.d/createguitar.sql
+volumes:
+  mysql_data:
