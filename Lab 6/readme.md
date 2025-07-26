@@ -17,7 +17,7 @@ There are 5 innjer join queries
 There is 1 query with a function
 There are 4 group by queries
 
-# Running The Script (DBeaver)
+# How to use
 
 1. Download and install Docker on your machine, make sure it stays running in the background
 2. Clone the Lab 6 folder to your machine and open it in your ID of choice (VSCode recommended)
