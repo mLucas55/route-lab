@@ -14,5 +14,13 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
       - ./createguitar.sql:/docker-entrypoint-initdb.d/createguitar.sql
+
+  python-app:
+    build: .
+    depends_on:
+      - mysql
+    stdin_open: true
+    tty: true
+
 volumes:
   mysql_data:
